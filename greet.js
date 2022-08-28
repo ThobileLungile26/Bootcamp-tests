@@ -1,3 +1,5 @@
-module.exports =  function greet(name){
+export default  function greet(name){
     return 'Hello, ' + name
 }
+console.log(greet('Thobile'));
+console.log(greet('Thandeka'));

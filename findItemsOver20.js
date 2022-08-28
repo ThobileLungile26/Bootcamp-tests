@@ -1,4 +1,4 @@
-module.exports = function findItemsOver20(itemList) {
+export default function findItemsOver20(itemList) {
     let array = [];
     for (let i = 0; i < itemList.length; i++) {
         let fruitList = itemList[i];
@@ -8,3 +8,39 @@ module.exports = function findItemsOver20(itemList) {
     }
     return array
 }
+var itemList = [
+    { name: 'apples', qty: 10 },
+    { name: 'pears', qty: 37 },
+    { name: 'bananas', qty: 27 },
+    { name: 'apples', qty: 3 },
+];
+
+var results = [
+    { name: 'pears', qty: 37 },
+    { name: 'bananas', qty: 27 },
+];
+
+var itemList2 = [
+    { name: 'apples', qty: 10 },
+    { name: 'pears', qty: 19 },
+    { name: 'bananas', qty: 17 },
+    { name: 'apples', qty: 3 },
+];
+
+var results2 = [];
+
+var itemList3 = [
+    { name: 'apples', qty: 40 },
+    { name: 'pears', qty: 20 },
+    { name: 'bananas', qty: 23 },
+    { name: 'apples', qty: 37 }
+];
+
+var results3 = [
+    { name: 'apples', qty: 40 },
+    { name: 'bananas', qty: 23 },
+    { name: 'apples', qty: 37 }
+];
+console.log(results, findItemsOver(itemList, 20));
+console.log(results, findItemsOver(itemList2, 20));
+console.log(results, findItemsOver(itemList3, 20));
